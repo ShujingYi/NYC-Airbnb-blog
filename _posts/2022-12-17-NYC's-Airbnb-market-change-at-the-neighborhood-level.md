@@ -3,7 +3,7 @@ title: "NYC's Airbnb market change at the neighborhood level"
 date: 2022-12-17
 published: true
 tags: [Cluster Analysis, hvplot]
-excerpt: "This is an example blog post that embeds a matplotlib image."
+excerpt: "Compare listing spatially before/"after" the pandemic and use K-means clustering to recommend places to stay for guests.."
 hv-loader:
   hv-chart-1: ["charts/hvplot_list_neighbor.html", "800"]
   hv-chart-2: ["charts/hvplot_price_per_person.html","700"]

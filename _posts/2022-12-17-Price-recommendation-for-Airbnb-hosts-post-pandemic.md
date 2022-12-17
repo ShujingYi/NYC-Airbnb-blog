@@ -5,14 +5,17 @@ published: true
 tags: [dataviz, altair, hvplot, holoviews]
 excerpt: "Embedding interactive charts on static pages using Jekyll."
 hv-loader:
-  hv-chart-1: ["charts/price_sidebyside.html", "600"]
-  hv-chart-2: ["charts/model_validation.html", "600"]
-
+  hv-chart-1: ["charts/price_dot.html", "500"]
+  hv-chart-2: ["charts/price_neighbor.html", "500"]
+  hv-chart-3: ["charts/point_validation.html", "500"]
+  hv-chart-4: ["charts/neighbor_validation.html", "500"]
 
 toc: false
 toc_sticky: true
 ---
 
+
+![features]({{ site.url }}{{ site.baseurl }}/assets/images/feature/features.png)
 
 
 ## Reasons Behind the Yield Difference (hvplot)  
@@ -25,6 +28,12 @@ To begin with, we compared the `host_year` among different yield types. A intere
 In terms of the host response time, the high-yield Airbnb host's response time is much higher than the median-yield hosts and low-yields hosts, most of them response to the guests within an hour.
 <div id="hv-chart-2"></div> 
 ---- 
+
+<div id="hv-chart-3"></div> 
+
+<div id="hv-chart-4"></div> 
+
+
 
 
 
