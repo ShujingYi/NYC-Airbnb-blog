@@ -61,13 +61,13 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "shujingy@upenn.edu"
+      url: shujingy@upenn.edu
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ShujingYi"
     - label: "linkedin"
       icon: "fab fa-fw fa-linkedin"
-      url: "www.linkedin.com/in/shujing-yi"
+      url: "https://www.linkedin.com/in/shujing-yi"
 
 footer:
   links:
