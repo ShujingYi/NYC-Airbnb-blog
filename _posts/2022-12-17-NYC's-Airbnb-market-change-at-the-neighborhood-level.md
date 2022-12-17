@@ -1,33 +1,87 @@
 ---
-title: "Influence of the pandemic on NYC's Airbnb market"
+title: "NYC's Airbnb market change at the neighborhood level"
 date: 2022-12-17
 published: true
-tags: [dataviz, matplotlib, seaborn]
+tags: [Cluster Analysis, hvplot]
 excerpt: "This is an example blog post that embeds a matplotlib image."
+hv-loader:
+  hv-chart-1: ["charts/hvplot_list_neighbor.html", "500"]
+  hv-chart-2: ["charts/hvplot_price_per_person.html","500"]
+  hv-chart-3: ["charts/hvplot_review_scores_rating.html", "500"]
+  hv-chart-4: ["charts/hvplot_reviews_per_month.html", "500"]
+  hv-chart-5: ["charts/hvplot_bedrooms.html", "500"]
+  hv-chart-6: ["charts/hvplot_cluster.html", "500"]
 toc: true
 toc_sticky: true
 read_time: false
 ---
 
-# Section 1
+## Compare Listing Spatially before/"after" Pandemic
 
-This is an example post. The posts are written in markdown.
+<div id="hv-chart-1"></div> 
 
+<div id="hv-chart-2"></div>  
 
+<div id="hv-chart-3"></div>  
 
-## Exploratory Analysis of New York Airbnb Dataset (seaborn)
-Below, we plot the histogram of Airbnb Price in New York,and found that most of Airbnb listings ranged from $60 to $160.
+<div id="hv-chart-4"></div>  
 
-![countlisting]({{ site.url }}{{ site.baseurl }}/assets/images/listing_counts.png)
+<div id="hv-chart-5"></div>  
 
-In terms of the average price by neighbourhood group, the Manhattan and Brooklin is much higher than Queens, Staten Island and Bronx, which explains why there are more Airbnbs in these two areas.  
+## K-means Clustering Analysis
+In this part, we clustered neiborhoods by Airbnb stats, trying to find desirable neighbourhoods for different types of Airbnb guests. Firstly, we selected the `price_per_person`,`reviews_per_month`,`review_scores_rating` and `count` as our features, and calculated mean value of thoses featuress by neighbourhood. Secondly, a K-means cluster analysis is performed and the results are devided into 5 labels:
 
-![boxprice]({{ site.url }}{{ site.baseurl }}/assets/images/price.png)
+<div id="hv-chart-6"></div>  
 
-Is Airbnb price and the number of Reviews per month related with each other? The following figure tells us that the more reviews there are, the lower the price of the Airbnb might be, which means that cheaper Airbnb seems to have higher occupancy rate. Besides, the price of entire home is much higher than private room.  
+For each features, we could calculate the average value per cluster, the results is as follows:
+```python
+group_cluster.groupby('label')['price_per_person'].mean().sort_values()
+```
+> label  
+> 0    31.247056  
+> 4    33.483703  
+> 1    37.457584  
+> 2    53.109358  
+> 3    80.434985  
+> Name: price_per_person, dtype: float64  
 
-![barreview]({{ site.url }}{{ site.baseurl }}/assets/images/review_per_month.png)
+```python
+group_cluster.groupby('label')['review_scores_rating'].mean().sort_values()
+```
+> label  
+> 4    91.364327  
+> 2    93.701058  
+> 3    94.164047  
+> 0    94.923690  
+> 1    95.913784  
+> Name: review_scores_rating, dtype: float64
 
-Then, we also explored the relationship between `host_year` (the year that host opened the Airbnb) and the count of different Airbnb types.There is a general upward trend of new Airbnb listings, and both of the entire apt and private room seems to have a absolute big market share. Besides, an interesting finding is that the private room seems to have become a more popular chioce than the entire home for Airbnb host since 2015.   
+```python
+group_cluster.groupby('label')['reviews_per_month'].mean().sort_values()
+```
+> label  
+> 3    1.120334  
+> 1    1.267650  
+> 2    1.274230  
+> 4    1.660396  
+> 0    2.890525  
+> Name: reviews_per_month, dtype: float64  
 
-![barscore]({{ site.url }}{{ site.baseurl }}/assets/images/review_scores_rating.png)
+```python
+group_cluster.groupby('label')['count'].mean().sort_values()
+```
+> label  
+> 0      37.510638  
+> 4      81.396226  
+> 1     106.000000  
+> 3     251.360000  
+> 2    1938.222222  
+> Name: count, dtype: float64  
+
+## Recommendations for Potential Airbnb Guests 
+
+Based on the clustering results, we try to divide our potential Airbnb guests into several categories, and recommended different neighborhoods for each, respectively.
+
+- For **price-sensitive** Airbnb guests, or people who pursue the **highest cost-effective** living experience,the neighbourhoods with label 0 might be their best chioce, since the Airbnb price per person for those areas is the lowest, and the review scores are also relatively high. However, It is worth noting that the Airbnbs in those neighbourhoods might be in high demand, since the Airbnb supply in those areas is small (low count), while the occupancy rate might be really high (with a high reviews_per_month).  
+  
+- For **quality-conscious** Airbnb guests, the neighbourhoods with label 1 might be their best chioce. The Airbnb in those areas are of high-quality and moderate price. With a reasonable supply and Airbnb count,they don't have to worry too much about those Airbnbs being booked.  
