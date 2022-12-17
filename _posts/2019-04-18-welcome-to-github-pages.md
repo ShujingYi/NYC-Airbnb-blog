@@ -1,31 +1,28 @@
 ---
-title: "Welcome to GitHub Pages!"
-date: 2019-04-18
+title: "Introduction"
+date: 2022-12-17
 categories:
-  - blog
+  - Introduction
 tags:
-  - Github Page
-  - update
+  - Airbnb
+  - User Demand
+  - Data Analysis
 ---
 
-You'll find this post in your `_posts` directory. Go ahead and edit it and commit your changes to to the repository. GitHub will automatically rebuild your site. Wait a few minutes and then refresh the site link to see the new changes. There are two main ways to make changes to your site:
+On March 11, 2020, the World Health Organization declared COVID-19 a global pandemic. The pandemic has led to a dramatic loss of human life worldwide and presented an unprecedented challenge to public health, food systems, and work in the past two years. Tourism is one of the sectors hit hardest by the COVID-19 pandemic. 
 
-- Edit files within your in the browser at GitHub.com
-- Clone down your repository and make updates locally, then push them to your GitHub repository.
+**Airbnb** , a platform that enables people to find short to longer-term accommodation, has faced many challenges during the pandemic.
 
-**To add new posts:** Add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+This project aims to use New York City as a case, study how the pandemic influenced the Airbnb market in different aspects, and provide advice for both Airbnb hosts and guests in the post-pandemic future. The data used in this project are mainly from [InsideAirbnb][InsideAirbnb], [NYC OpenData][NYC OpenData] and [OpenStreetMap][OpenStreetMap].   
 
-Jekyll also offers powerful support for code snippets:
+This project will be divided into three parts:
+-  Influence of the pandemic on NYC's Airbnb market
+-  NYC's Airbnb market change at the neighborhood level
+-  Price recommendation for Airbnb hosts post-pandemic
 
-```python
-def print_message(message):
-  print(message)
-
-print_message("Welcome to GitHub Pages")
-```
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll.
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+For detailed codes about this project, please click [here][here].
+   
+[InsideAirbnb]: http://insideairbnb.com/get-the-data/
+[NYC OpenData]: https://opendata.cityofnewyork.us/
+[OpenStreetMap]: https://www.openstreetmap.org/
+[here]:https://github.com/ShujingYi/NYC-Airbnb-market-in-a-post-pandemic-future
