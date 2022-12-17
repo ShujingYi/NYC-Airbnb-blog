@@ -5,12 +5,12 @@ published: true
 tags: [Cluster Analysis, hvplot]
 excerpt: "This is an example blog post that embeds a matplotlib image."
 hv-loader:
-  hv-chart-1: ["charts/hvplot_list_neighbor.html", "500"]
-  hv-chart-2: ["charts/hvplot_price_per_person.html","500"]
-  hv-chart-3: ["charts/hvplot_review_scores_rating.html", "500"]
+  hv-chart-1: ["charts/hvplot_list_neighbor.html", "800"]
+  hv-chart-2: ["charts/hvplot_price_per_person.html","700"]
+  hv-chart-3: ["charts/hvplot_review_scores_rating.html", "600"]
   hv-chart-4: ["charts/hvplot_reviews_per_month.html", "500"]
-  hv-chart-5: ["charts/hvplot_bedrooms.html", "500"]
-  hv-chart-6: ["charts/hvplot_cluster.html", "500"]
+  hv-chart-5: ["charts/hvplot_bedrooms.html", "400"]
+  hv-chart-6: ["charts/hvplot_cluster.html", "300"]
 toc: true
 toc_sticky: true
 read_time: false

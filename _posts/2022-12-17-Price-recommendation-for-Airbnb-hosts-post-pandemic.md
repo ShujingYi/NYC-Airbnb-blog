@@ -5,8 +5,8 @@ published: true
 tags: [dataviz, altair, hvplot, holoviews]
 excerpt: "Embedding interactive charts on static pages using Jekyll."
 hv-loader:
-  hv-chart-1: ["charts/price_sidebyside.html", "400"]
-  hv-chart-2: ["charts/model_validation.html", "400"]
+  hv-chart-1: ["charts/price_sidebyside.html", "600"]
+  hv-chart-2: ["charts/model_validation.html", "600"]
 
 
 toc: false
