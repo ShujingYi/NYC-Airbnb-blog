@@ -61,7 +61,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: shujingy@upenn.edu
+      url: #"shujingy@upenn.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ShujingYi"
