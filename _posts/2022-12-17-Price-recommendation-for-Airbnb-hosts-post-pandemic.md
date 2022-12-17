@@ -1,14 +1,16 @@
 ---
-title: "Example: Embedding Altair & Hvplot Charts"
-date: 2019-04-13
+title: "Price recommendation for Airbnb hosts post-pandemic"
+date: 2022-12-17
 published: true
 tags: [dataviz, altair, hvplot, holoviews]
 excerpt: "Embedding interactive charts on static pages using Jekyll."
 hv-loader:
-  hv-chart-1: "charts/model_validation.html"
+  hv-chart-1: "charts/price_dot.html"
+  hv-chart-2: "charts/model_validation.html"
+
 
 toc: false
-toc_sticky: false
+toc_sticky: true
 ---
 
 
@@ -17,11 +19,17 @@ This post will show examples of embedding interactive charts produced using [Alt
 
 
 
-## HvPlot Example
+## Reasons Behind the Yield Difference (hvplot)  
+After calculating the monthly yields of Airbnb listings, we classified the results into 3 categorys: high yield(top 30%), median yield(30%-70%), low yield(70%-100%).In this part, we decided to do some simple comparison among different yields' Airbnb.
 
-Lastly, the measles incidence produced using the HvPlot package:
+To begin with, we compared the `host_year` among different yield types. A interesting finding is that the new hosts' Airbnb seems to earned more than those experienced hosts.
+<div id="hv-chart-1"></div>  
+---- 
+In terms of the host response time, the high-yield Airbnb host's response time is much higher than the median-yield hosts and low-yields hosts, most of them response to the guests within an hour.
+<div id="hv-chart-2"></div> 
+---- 
 
-<div id="hv-chart-1"></div>
+
 
 ## Notes
 
