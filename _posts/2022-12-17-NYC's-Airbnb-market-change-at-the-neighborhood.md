@@ -44,7 +44,6 @@ group_neighbor_22.groupby('label')['price_per_person'].mean().sort_values()
 -4    44.939426
 -2    66.150279
 -0    86.746105
--Name: price_per_person, dtype: float64
 
 ```python
 group_neighbor_22.groupby('label')['review_scores_rating'].mean().sort_values()
@@ -61,11 +60,11 @@ group_neighbor_22.groupby('label')['review_scores_rating'].mean().sort_values()
 group_neighbor_22.groupby('label')['reviews_per_month'].mean().sort_values()
 ```
 
-- 2    1.046912
-- 0    1.133068
-- 3    1.194759
-- 4    1.927789
-- 1    1.991417
+- Label 2    1.046912
+- Label 0    1.133068
+- Label 3    1.194759
+- Label 4    1.927789
+- Label 1    1.991417
 
 ```python
 group_neighbor_22.groupby('label')['bedrooms'].mean().sort_values()
