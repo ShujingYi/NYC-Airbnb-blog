@@ -20,6 +20,7 @@ read_time: false
 
 ![neighborhood]({{ site.url }}{{ site.baseurl }}/assets/images/neighborhood.png)
 
+
 <div id="hv-chart-1"></div> 
 
 <div id="hv-chart-2"></div>  
