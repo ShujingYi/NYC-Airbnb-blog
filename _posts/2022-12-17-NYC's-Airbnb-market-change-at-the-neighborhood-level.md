@@ -18,6 +18,8 @@ read_time: false
 
 ## Compare Listing Spatially before/"after" Pandemic
 
+![neighborhood]({{ site.url }}{{ site.baseurl }}/assets/images/neighborhood.png)
+
 <div id="hv-chart-1"></div> 
 
 <div id="hv-chart-2"></div>  
