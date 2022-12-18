@@ -46,7 +46,7 @@ After calculating the monthly yields of Airbnb listings, we classified the resul
 
 <div id="hv-chart-4"></div> 
 
-<div id="hv-chart-4"></div> 
+<div id="hv-chart-5"></div> 
 
 
 
