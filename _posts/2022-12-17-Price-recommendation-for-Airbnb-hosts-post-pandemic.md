@@ -1,6 +1,6 @@
 ---
 title: "Price recommendation for Airbnb hosts post-pandemic"
-date: 2022-12-17
+date: 2022-12-15
 published: true
 tags: [dataviz, altair, hvplot, holoviews]
 excerpt: "Build Random Forest Model to Predict the Airbnb Price ."
@@ -11,8 +11,9 @@ hv-loader:
   hv-chart-4: ["charts/point_validation.html", "500"]
   hv-chart-5: ["charts/neighbor_validation.html", "500"]
 
-toc: false
+toc: true
 toc_sticky: true
+read_time: false
 ---
 
 
