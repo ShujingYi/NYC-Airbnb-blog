@@ -1,9 +1,11 @@
 ---
-title: "NYC's Airbnb market change at the neighborhood level"
+title: " NYC's Airbnb market change at the neighborhood level "
 date: 2022-12-17
 published: true
 tags: [Cluster Analysis, hvplot]
-excerpt: "Compare listing spatially before/"after" the pandemic and use K-means clustering to recommend places to stay for guests."
+excerpt: "Compare listing spatially and use K-means clustering to recommend places to stay for guests."
+hv-loader:
+  hv-chart-1: ["charts/hvplot_cluster.html", "500"]
 toc: true
 toc_sticky: true
 read_time: false
@@ -17,7 +19,7 @@ read_time: false
 ## K-means Clustering Analysis
 In this part, we clustered neiborhoods by Airbnb stats, trying to find desirable neighbourhoods for different types of Airbnb guests. Firstly, we selected the `price_per_person`,`reviews_per_month`,`review_scores_rating` and `count` as our features, and calculated mean value of thoses featuress by neighbourhood. Secondly, a K-means cluster analysis is performed and the results are devided into 5 labels:
 
-<div id="hv-chart-6"></div>  
+<div id="hv-chart-1"></div>  
 
 For each features, we could calculate the average value per cluster, the results is as follows:
 ```python

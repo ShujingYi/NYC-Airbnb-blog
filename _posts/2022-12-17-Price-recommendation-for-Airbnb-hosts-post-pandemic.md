@@ -37,7 +37,7 @@ In terms of the host response time, the high-yield Airbnb host's response time i
 
 ## Train a Random Forest Model
 
-After calculating the monthly yields of Airbnb listings, we classified the results into 3 categorys: high yield(top 30%), median yield(30%-70%), low yield(70%-100%).In this part, we decided to do some simple comparison among different yields' Airbnb.
+After correlation analysis, we used a 70/30% training/test split and built an randomforest regression model. the result of testing score is as follows:
 
 
 
