@@ -17,54 +17,67 @@ read_time: false
 
 
 ## K-means Clustering Analysis
-In this part, we clustered neiborhoods by Airbnb stats, trying to find desirable neighbourhoods for different types of Airbnb guests. Firstly, we selected the `price_per_person`,`reviews_per_month`,`review_scores_rating` and `count` as our features, and calculated mean value of thoses featuress by neighbourhood. Secondly, a K-means cluster analysis is performed and the results are devided into 5 labels:
+In this part, we clustered neighborhoods by Airbnb features, trying to find desirable neighborhoods for guests with different demands. We selected the `price_per_person`,`reviews_per_month`,`review_scores_rating`, `bedrooms` and `count` as our features and calculated the mean value of those features by neighborhood. Then we performed K-means cluster analysis, and the results were divided into five labels:
 
 <div id="hv-chart-1"></div>  
 
 For each features, we could calculate the average value per cluster, the results is as follows:
 ```python
-group_cluster.groupby('label')['price_per_person'].mean().sort_values()
+group_neighbor_22.groupby('label')['count'].mean().sort_values()
 ```
-> label  
-> 0    31.247056  
-> 4    33.483703  
-> 1    37.457584  
-> 2    53.109358  
-> 3    80.434985  
-> Name: price_per_person, dtype: float64  
+>label
+>4      14.400000
+>1      50.784091
+>3      94.285714
+>0     167.763158
+>2    1353.200000
+>Name: count, dtype: float64 
 
 ```python
-group_cluster.groupby('label')['review_scores_rating'].mean().sort_values()
+group_neighbor_22.groupby('label')['price_per_person'].mean().sort_values()
 ```
-> label  
-> 4    91.364327  
-> 2    93.701058  
-> 3    94.164047  
-> 0    94.923690  
-> 1    95.913784  
-> Name: review_scores_rating, dtype: float64
+>label
+>1    42.493588
+>3    44.160675
+>4    44.939426
+>2    66.150279
+>0    86.746105
+>Name: price_per_person, dtype: float64
 
 ```python
-group_cluster.groupby('label')['reviews_per_month'].mean().sort_values()
+group_neighbor_22.groupby('label')['review_scores_rating'].mean().sort_values()
 ```
-> label  
-> 3    1.120334  
-> 1    1.267650  
-> 2    1.274230  
-> 4    1.660396  
-> 0    2.890525  
-> Name: reviews_per_month, dtype: float64  
+>label
+>3    4.539298
+>2    4.606367
+>0    4.665889
+>4    4.749952
+>1    4.764137
+>Name: review_scores_rating, dtype: float64
 
 ```python
-group_cluster.groupby('label')['count'].mean().sort_values()
+group_neighbor_22.groupby('label')['reviews_per_month'].mean().sort_values()
 ```
-> label  
-> 0      37.510638  
-> 4      81.396226  
-> 1     106.000000  
-> 3     251.360000  
-> 2    1938.222222  
-> Name: count, dtype: float64  
+>label
+>2    1.046912
+>0    1.133068
+>3    1.194759
+>4    1.927789
+>1    1.991417
+>Name: reviews_per_month, dtype: float64
+
+```python
+group_neighbor_22.groupby('label')['bedrooms'].mean().sort_values()
+```
+>label
+>3    1.305697
+>2    1.343419
+>1    1.362601
+>0    1.378306
+>4    2.483525
+>Name: bedrooms, dtype: float64
+
+
 
 ## Recommendations for Potential Airbnb Guests 
 
