@@ -28,53 +28,53 @@ For each features, we could calculate the average value per cluster, the results
 group_neighbor_22.groupby('label')['count'].mean().sort_values()
 ```
 
--4      14.400000
--1      50.784091
--3      94.285714
--0     167.763158
--2    1353.200000
+- Label4:      14.400000
+- Label1:      50.784091
+- Label3:      94.285714
+- Label0:     167.763158
+- Label2:    1353.200000
 
 
 ```python
 group_neighbor_22.groupby('label')['price_per_person'].mean().sort_values()
 ```
 
--1    42.493588
--3    44.160675
--4    44.939426
--2    66.150279
--0    86.746105
+- Label1:    42.493588
+- Label3:    44.160675
+- Label4:    44.939426
+- Label2:    66.150279
+- Label0:    86.746105
 
 ```python
 group_neighbor_22.groupby('label')['review_scores_rating'].mean().sort_values()
 ```
 
-- 3    4.539298
-- 2    4.606367
-- 0    4.665889
-- 4    4.749952
-- 1    4.764137
+- Label3:    4.539298
+- Label2:    4.606367
+- Label0:    4.665889
+- Label4:    4.749952
+- Label1:    4.764137
 
 
 ```python
 group_neighbor_22.groupby('label')['reviews_per_month'].mean().sort_values()
 ```
 
-- Label 2    1.046912
-- Label 0    1.133068
-- Label 3    1.194759
-- Label 4    1.927789
-- Label 1    1.991417
+- Label2:    1.046912
+- Label0:    1.133068
+- Label3:    1.194759
+- Label4:    1.927789
+- Label1:    1.991417
 
 ```python
 group_neighbor_22.groupby('label')['bedrooms'].mean().sort_values()
 ```
 
-> 3    1.305697
-> 2    1.343419
-> 1    1.362601
-> 0    1.378306
-> 4    2.483525
+- Label3:    1.305697
+- Label2:    1.343419
+- Label1:    1.362601
+- Label0:    1.378306
+- Label4:    2.483525
 
 
 
