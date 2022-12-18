@@ -1,6 +1,7 @@
 ---
 title: "Introduction"
 date: 2022-12-17
+excerpt: "The Airbnb market has faced many challenges during Covid."
 categories:
   - Introduction
 tags:
